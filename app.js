@@ -13,6 +13,7 @@ document.getElementById("getUnits").addEventListener("click", getInputs);
 const outputTable = document.getElementById("outputTable")
 
 const handleChange = (array) => {
+  outputTable.innerHTML+=''
   let result = null
   for (let i = 0; i < array.length; i++) {
     let property = Object.getOwnPropertyNames(array[i])[0]
