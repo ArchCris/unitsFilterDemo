@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="app.js" type="module"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Pure Interiors Filter</title>
+</head>
+<body class="app_conteiner">
+  <div class="input_selection">
+    <!-- Selection type -->
+    <h4>Type</h4>
+    <div class="selection_type">
+      <input type="radio" value="base_unit" name="type">Base unit</input>
+      <input type="radio" value="wall_unit" name="type">Wall unit</input>
+      <input type="radio" value="tall_unit" name="type">Tall unit</input>
+    </div>
+    <!-- Selection width -->
+    <h4>Width</h4>
+    <div class="dimensions_width">
+      <input type="radio" value=30 name="width">30</input>
+      <input type="radio" value=35 name="width">35</input>
+      <input type="radio" value=40 name="width">40</input>
+      <input type="radio" value=45 name="width">45</input>
+      <input type="radio" value=50 name="width">50</input>
+      <input type="radio" value=60 name="width">60</input>
+      <input type="radio" value=80 name="width">80</input>
+      <input type="radio" value=90 name="width">90</input>
+      <input type="radio" value=100 name="width">100</input>
+      <input type="radio" value=120 name="width">120</input>
+    </div>
+    <!-- Selection height -->
+    <h4>Height</h4>
+    <div class="dimensions_height">
+      <input type="radio" value=60 name="height">60</input>
+      <input type="radio" value=72 name="height">72</input>
+      <input type="radio" value=84 name="height">84</input>
+    </div>
+    <!-- Selection depth -->
+    <h4>Depth</h4>
+    <div class="dimensions_height">
+      <input type="radio" value=35 name="depth">35</input>
+      <input type="radio" value=60 name="depth">60</input>
+      <input type="radio" value=70 name="depth">70</input>
+    </div>
+   
+    <button id="getUnits">boton</button>
+  </div>
+  <div class="output_selection">
+    <table id="outputTable">
+      <tr>
+        <th>Code</th>
+        <th>Width</th>
+        <th>height</th>
+        <th>depth</th>
+        <th>page</th>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

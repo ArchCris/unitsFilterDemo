@@ -1,0 +1,30 @@
+*,*::after,*::before{
+  margin: 0;
+  padding: 0;
+}
+.app_conteiner{
+  height: 100vh;
+  width: 100%;
+}
+.input_selection{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column ;
+  justify-content: center;
+  align-items: center;
+}
+input{
+  margin: .2rem;
+}
+.selection_type{
+  background-color: white;
+}
+.output_selection{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column ;
+  justify-content: start;
+  align-items: center;
+}
