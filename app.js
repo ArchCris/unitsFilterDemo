@@ -1,27 +1,31 @@
 import {data} from './assets/data.js'
 
 const getInputs = () => {
-  let typeSelection = document.querySelector('input[name="type"]:checked').value
-  let widthSelection = Number(document.querySelector('input[name="width"]:checked').value)
-  let heightSelection = Number(document.querySelector('input[name="height"]:checked').value)
-  let depthSelection = Number(document.querySelector('input[name="depth"]:checked').value)
-  console.log(typeSelection,widthSelection)
-  handleChange([{type:typeSelection},{width:widthSelection},{height:heightSelection},{depth:depthSelection}])
+  let typeSelection = document.querySelector('input[name="type"]:checked') ? document.querySelector('input[name="type"]:checked').value : null
+  let widthSelection = document.querySelector('input[name="width"]:checked') ? Number(document.querySelector('input[name="width"]:checked').value) : null
+  let heightSelection = document.querySelector('input[name="height"]:checked')? Number(document.querySelector('input[name="height"]:checked').value) : null
+  let depthSelection = document.querySelector('input[name="depth"]:checked') ? Number(document.querySelector('input[name="depth"]:checked').value) : null
+  let frontSelection = document.querySelector('input[name="front_type"]:checked') ? document.querySelector('input[name="front_type"]:checked').value : null
+  handleChange([{type:typeSelection},{width:widthSelection},{height:heightSelection},{depth:depthSelection},{open_system:frontSelection}])
 }
 
 document.getElementById("getUnits").addEventListener("click", getInputs);
 const outputTable = document.getElementById("outputTable")
 
 const handleChange = (array) => {
-  outputTable.innerHTML+=''
+  console.log(array)
+  outputTable.innerHTML=''
   let result = null
   for (let i = 0; i < array.length; i++) {
     let property = Object.getOwnPropertyNames(array[i])[0]
-    console.log(property,array[i][property])
-    if(result==null){
-      result = data.filter(unidad=>unidad[property]===array[i][property])
+    if(array[i][property]===null){
+      console.log('no computa')
     }else{
-      result = result.filter(unidad=>unidad[property]===array[i][property])
+      if(result==null){
+        result = data.filter(unidad=>unidad[property]===array[i][property])
+      }else{
+        result = result.filter(unidad=>unidad[property]===array[i][property])
+      }
     }
   }
   result.forEach(node=>{

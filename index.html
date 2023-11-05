@@ -11,51 +11,106 @@
   <div class="input_selection">
     <!-- Selection type -->
     <h4>Type</h4>
-    <div class="selection_type">
-      <input type="radio" value="base_unit" name="type">Base unit</input>
-      <input type="radio" value="wall_unit" name="type">Wall unit</input>
-      <input type="radio" value="tall_unit" name="type">Tall unit</input>
+    <div class="selection_type selection-field">
+      <label>Base unit
+        <input type="radio" value="base_unit" name="type"/>
+      </label>
+      <label>Wall unit
+        <input type="radio" value="wall_unit" name="type"/>
+      </label>
+      <label>Tall unit
+        <input type="radio" value="tall_unit" name="type"/>
+      </label>
     </div>
     <!-- Selection width -->
     <h4>Width</h4>
-    <div class="dimensions_width">
-      <input type="radio" value=30 name="width">30</input>
-      <input type="radio" value=35 name="width">35</input>
-      <input type="radio" value=40 name="width">40</input>
-      <input type="radio" value=45 name="width">45</input>
-      <input type="radio" value=50 name="width">50</input>
-      <input type="radio" value=60 name="width">60</input>
-      <input type="radio" value=80 name="width">80</input>
-      <input type="radio" value=90 name="width">90</input>
-      <input type="radio" value=100 name="width">100</input>
-      <input type="radio" value=120 name="width">120</input>
+    <div class="dimensions_width selection-field">
+      <label>30
+        <input type="radio" value=30 name="width"/>
+      </label>
+      <label>35
+        <input type="radio" value=35 name="width"/>
+      </label>
+      <label>40
+        <input type="radio" value=40 name="width"/>
+      </label>
+      <label>45
+        <input type="radio" value=45 name="width"/>
+      </label>
+      <label>50
+        <input type="radio" value=50 name="width"/>
+      </label>
+      <label>60
+        <input type="radio" value=60 name="width"/>
+      </label>
+      <label>80
+        <input type="radio" value=80 name="width"/>
+      </label>
+      <label>90
+        <input type="radio" value=90 name="width"/>
+      </label>
+      <label>100
+        <input type="radio" value=100 name="width"/>
+      </label>
+      <label>120
+        <input type="radio" value=120 name="width"/>
+      </label>
     </div>
     <!-- Selection height -->
     <h4>Height</h4>
-    <div class="dimensions_height">
-      <input type="radio" value=60 name="height">60</input>
-      <input type="radio" value=72 name="height">72</input>
-      <input type="radio" value=84 name="height">84</input>
+    <div class="dimensions_height selection-field">
+      <label>60
+        <input type="radio" value=60 name="height"/>
+      </label>
+      <label>72
+        <input type="radio" value=72 name="height"/>
+      </label>
+      <label>84
+        <input type="radio" value=84 name="height"/>
+      </label>
     </div>
     <!-- Selection depth -->
     <h4>Depth</h4>
-    <div class="dimensions_height">
-      <input type="radio" value=35 name="depth">35</input>
-      <input type="radio" value=60 name="depth">60</input>
-      <input type="radio" value=70 name="depth">70</input>
+    <div class="dimensions_height selection-field">
+      <label>35
+        <input type="radio" value=35 name="depth"/>
+      </label>
+      <label>60
+        <input type="radio" value=60 name="depth"/>
+      </label>
+      <label>70
+        <input type="radio" value=70 name="depth"/>
+      </label>
     </div>
-   
-    <button id="getUnits">boton</button>
+     <!-- Selection front -->
+     <h4>Open layout</h4>
+     <div class="selection_front selection-field">
+        <label>1 Door
+          <input type="radio" value="1_door" name="front_type"/>
+        </label>
+        <label>2 Doors
+          <input type="radio" value="2_doors" name="front_type"/>
+        </label>
+        <label>1 drawer 1 door
+          <input type="radio" value="1_drawer_1_door" name="front_type"/>
+        </label>
+     </div>
+    <button id="getUnits">SEARCH</button>
   </div>
   <div class="output_selection">
-    <table id="outputTable">
-      <tr>
-        <th>Code</th>
-        <th>Width</th>
-        <th>height</th>
-        <th>depth</th>
-        <th>page</th>
-      </tr>
+    <table>
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Width</th>
+          <th>height</th>
+          <th>depth</th>
+          <th>page</th>
+        </tr>
+      </thead>
+      <tbody id="outputTable">
+        <!-- Matches -->
+      </tbody>
     </table>
   </div>
 </body>
